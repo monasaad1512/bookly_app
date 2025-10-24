@@ -5,12 +5,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({Key? key}) : super(key: key);
+  const CustomAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 40, bottom: 20),
+      padding: const EdgeInsets.only(top: 40, bottom: 20, left: 20),
       child: Row(
         children: [
           Image.asset(AssetsData.logo, height: 18),
