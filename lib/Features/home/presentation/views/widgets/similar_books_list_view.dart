@@ -14,17 +14,17 @@ class SimilarBooksListView extends StatelessWidget {
       builder: (context, state) {
         if (state is SimilarBooksSuccess) {
           return SizedBox(
-            height: MediaQuery.of(context).size.height * .25,
+            height: MediaQuery.of(context).size.height * .15,
             child: ListView.builder(
               physics: BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemCount: state.books.length,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
                   child: CustomeBookImage(
                     imageUrl:
-                        state.books[index].volumeInfo.imageLinks!b.thumbnail,
+                        state.books[index].volumeInfo.imageLinks!.thumbnail,
                   ),
                 );
               },
